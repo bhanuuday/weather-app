@@ -21,7 +21,7 @@ weatherForm.addEventListener('submit', (e) => {
 })
 
 const Forecast = (location) => {
-    fetch('http://localhost:3000/weather?address='+ location).then((response) => {
+    fetch('https://weather-app-8999.herokuapp.com/weather?address='+ location).then((response) => {
         response.json().then((data) => {
             if(data.error) {
                 messageTwo.textContent = "Error - " + data.error
